@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h1>
+        <p style="text-align:center">登录</p>
+    </h1>
+    <h3>
+         <p style="color: #ff0000;text-align: center">请保证用与打开该页面的浏览器和游戏处于同一台电脑同一个IP环境</p>
+        <p style="color: #ff0000;text-align: center">请不要使用代理打开此页面,游戏也不要使用加速器,否则无法进入游戏</p>
+    </h3>
+    <center>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <p style="text-align:center">steamID64：<input type="text" name="username"/></p>
+            <p style="text-align:center">密码：<input type="password" name="password"/></p>
+            <p style="text-align:center">自定义IP：<input type="ip" name="ip"/></p>
+			<a href="https://ip.900cha.com/" target="_blank">点击查询IP</a></br>
+            <a href="../check_login.html/" target="_blank">点击查询登录记录</a></br>
+            如果你访问网页的IP和进入游戏的IP不一样请自定义IP,留空则使用访问此网站使用的IP</br>
+			如果登录之后无法进入游戏可以尝试打开网站复制IP粘贴到自定义IP处</br>
+            <p style="text-align:center"> <input type="submit" value="登录" />
+        </form>
+        <p>{{ rlt }}</p>
+     </center>
+</body>
+</html>

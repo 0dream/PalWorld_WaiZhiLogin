@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询非法登录记录</title>
+</head>
+<body>
+    <h1>
+        <p style="text-align:center">查询非法登录记录</p>
+    </h1>
+    <center>
+        <form action="/check_login/" method="post">
+            {% csrf_token %}
+
+            <p style="text-align:center">steamID64：<input type="text" name="username"/></p>
+            <p style="text-align:center">密码：<input type="password" name="password"/></p>
+            <p style="text-align:center"> <input type="submit" value="查询" />
+        </form>
+        <p>{{ rlt }}</p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+    <h1>
+        <p style="text-align:center">新用户注册</p>
+    </h1>
+	    <h1>
+        <p style="text-align:center">当前注册需要激活码,不是收费,是防止外挂,清联系管理员代注册</p>
+    </h1>
+    <center>
+        <form action="/register/" method="post">
+            {% csrf_token %}
+
+            <p style="text-align:center">steamID64：<input type="text" name="username"/></p>
+
+            <p style="text-align:center">密码：<input type="password" name="password"/></p>
+            请输入6-16位的数字和字母(不能纯数字或字母)</br>
+			密码请不要设置为其他任何地方设置过的密码，请设置一个简单好用，第一次使用，而且以后也不要使用的密码</br>
+            <p style="text-align:center">注册码：<input type="text" name="logincode"/></p>
+            <p style="text-align:center"> <input type="submit" value="注册" />
+        </form>
+        <p>{{ rlt }}</p>
+    </center>
+</body>
+</html>
