@@ -1,5 +1,5 @@
 首先声明我知道代码很垃圾,勿喷谢谢,并且没有使用数据库全程操作文件  
-(请使用python3,需要Django)
+(请使用python3,需要Django)  
 #login模块:  
 (修改\login\Pal\log_reg.py文件中的变量即可)  
 使用网页注册登录  
