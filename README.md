@@ -3,6 +3,7 @@
 (请使用python3,需要Django)  
   
 ###仅限Windows,使用防火墙规则阻止未登录玩家ip,必须启动防火墙才有效(理论上只要把代码执行方式改成Linux,防火墙目录改成iptables或者firewalld即可)  
+###所有服务器必须安装palguard反作弊  
 !!!!需要管理员模式运行,否则banip模块无法正常修改防火墙规则!!!
   
 #login模块:  
