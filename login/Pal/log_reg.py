@@ -77,9 +77,10 @@ def register(request):
                                     "<button onclick=\"window.location.href='../register.html'\" "
                                     "type=\"button\">返回注册</button>")
         else:
-            return HttpResponse("ERROR.不要用微信QQ等乱七八糟的内置浏览器访问,请打开谷歌浏览器等")
+            return HttpResponse("激活码错误,由于炸服挂捣乱暂不开放注册,需要注册请联系管理员")
+            
     else:
-        return HttpResponse("激活码错误,由于炸服挂捣乱暂不开放注册,需要注册请联系管理员")
+        return HttpResponse("ERROR.不要用微信QQ等乱七八糟的内置浏览器访问,请打开谷歌浏览器等")
 
 
 def login(request):
